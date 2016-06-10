@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+    <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <default>
+        <pickrr>
+            <title>Pickrr</title>
+            <platform>Magento2</platform>
+            <active>1</active>
+            <api_key>API Key</api_key>
+            <api_secret>API Secret</api_secret>
+        </pickrr>
+    </default>
+</config>
