@@ -1,6 +1,6 @@
 {
 	"name": "pickrr/magento2",
-	"description": "Pickrr Magento 2 module for automatic importing of shipment/tracking details in your pickrr account and delivering notifications to clients.",
+	"description": "Pickrr Magento 2 module for automatic creating/importing of shipment/tracking details in your pickrr account.",
 	"type": "magento2-module",
 	"version": "1.0.0",
 	"license": [
@@ -18,14 +18,14 @@
 	"authors": [
 		{
 			"name": "Satyam",
-			"email": "EMAIL",
+			"email": "satyam.gupta2@gmail.com",
 			"role": "Developer"
 		}
 	],
 	"support": {
 		"email": "info@pickrr.com",
-		"issues": "GITHUB - MODULE LINK",
-		"docs": "DOCUMENTATION LINK"
+		"issues": "https://github.com/satyamgupta/pickrr-magento2/issues",
+		"docs": "https://github.com/satyamgupta/pickrr-magento2/"
 	},
 	"extra": {
 		"map": [
