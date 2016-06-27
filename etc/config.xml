@@ -6,8 +6,6 @@
             <platform>Magento2</platform>
             <active>1</active>
             <automatic_export_enable>0</automatic_export_enable>
-            <api_key>API_Key</api_key>
-            <api_secret>API_Secret</api_secret>
         </pickrr>
     </default>
 </config>

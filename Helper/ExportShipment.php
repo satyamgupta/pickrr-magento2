@@ -21,9 +21,7 @@ extends \Magento\Framework\App\Helper\AbstractHelper
     // Some code referred from: http://www.anyknowledge.com/magento-programmatically-add-shipment-with-its-tracking-number-to-any-specific-order/
 
     public function completeShipment($order, $shipmentTrackingNumber)
-    {
-        // $shipmentTrackingNumber = 'P01234';
-     
+    {     
         $customerEmailComments = '';
      
         if (!$order->getId()) {
@@ -102,8 +100,6 @@ extends \Magento\Framework\App\Helper\AbstractHelper
     public function createShipment($auth_token, $item_name, $pickup_time, $from_name, $from_phone_number, $from_pincode, $from_address, $to_name, $to_phone_number, $to_pincode, $to_address, $order_id = 'NULL', $cod=0.0)
     {
         try{
-
-          $from_pincode = $to_pincode = '245101';
 
           $params = array(
                       'auth_token' => $auth_token,
