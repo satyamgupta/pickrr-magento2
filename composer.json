@@ -25,7 +25,6 @@
 		"issues": "https://github.com/satyamgupta/pickrr-magento2/issues",
 		"docs": "https://github.com/satyamgupta/pickrr-magento2/"
 	},
-	"minimum-stability": "dev",
-	"prefer-stable": "true"
+	"minimum-stability": "alpha"
 
 }
