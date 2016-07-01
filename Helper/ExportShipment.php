@@ -137,14 +137,18 @@ extends \Magento\Framework\App\Helper\AbstractHelper
             //close connection
             curl_close($ch);
 
+            if(gettype($result)!="array")
+              throw new \Exception("Problem in connecting with Pickrr");
+
+            if($result['err']!="")
+              throw new \Exception($result['err']);
+
             return $result['tracking_id'];
 
         }
         catch (\Exception $e) {
             throw new LocalizedException(__('There was an error in creating the Pickrr shipment: %1.', $e->getMessage()));
         }
-
-
     }
 
     public function createOrderShipment($auth_token, $order, $pickup_time, $from_name, $from_phone_number, $from_pincode, $from_address, $cod=0.0)

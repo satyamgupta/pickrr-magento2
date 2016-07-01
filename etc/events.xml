@@ -3,4 +3,7 @@
     <event name="sales_order_shipment_save_commit_after">
         <observer name="Pickrr_Magento2_Shipment_Commit_After" instance="Pickrr\Magento2\Observer\shipmentCommitAfter" />
     </event>
+    <event name="sales_order_save_commit_after">
+        <observer name="Pickrr_Magento2_Order_Commit_After" instance="Pickrr\Magento2\Observer\orderCommitAfter" />
+    </event>
 </config>
