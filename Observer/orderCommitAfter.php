@@ -51,6 +51,6 @@ class orderCommitAfter implements ObserverInterface
         $from_pincode = $this->scopeConfig->getValue('pickrr_magento2/shipment_details/from_pincode', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
         $from_address = $this->scopeConfig->getValue('pickrr_magento2/shipment_details/from_address', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 
-        $this->helper->createOrderShipment($auth_token, $order, $pickup_time, $from_name, $from_phone_number, $from_pincode, $from_address);
+        $this->helper->createOrderShipment($auth_token, $order, $from_name, $from_phone_number, $from_pincode, $from_address, $pickup_time);
     }
 }

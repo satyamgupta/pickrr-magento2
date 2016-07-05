@@ -20,6 +20,8 @@ Pickrr Magento 2 module for automatic/manual creation of shipments thorugh Pickr
 3. Verify in Magento Admin Panel whether the module is enabled. To check, go to Admin Panel >Stores>Configuration>Advanced>Advanced>Pickrr_magento2 <br>
 4. Goto Admin Panel >Stores>configuration>VendorExtensions>PickrrMagento2, and enable the automatic shipment option & enter the asked details.
 
+In case of any problems/queries, contact satyam.gupta2@gmail.com
+
 ---
 
 ###Usage Instructions (only for manual calls, when automatic shipment mode is not enabled):

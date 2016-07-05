@@ -167,7 +167,7 @@ extends \Magento\Framework\App\Helper\AbstractHelper
             $to_address = implode(', ', $shipping_address->getStreet()) . ", " . $shipping_address->getCity() . ", " . $shipping_address->getRegion();
             $order_id = $order->getIncrementId();
 
-            $tracking_no = $this->createShipment($auth_token, $item_name, $pickup_time, $from_name, $from_phone_number, $from_pincode, $from_address, $to_name, $to_phone_number, $to_pincode, $to_address, $order_id, $cod);
+            $tracking_no = $this->createShipment($auth_token, $item_name, $from_name, $from_phone_number, $from_pincode, $from_address, $to_name, $to_phone_number, $to_pincode, $to_address, $order_id, $pickup_time, $cod);
 
             $this->completeShipment($order, $tracking_no);
         }
