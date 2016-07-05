@@ -1,25 +1,30 @@
 <?xml version="1.0"?>
-    <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <config>
     <default>
-        <pickrr>
-            <title>Pickrr</title>
-            <platform>Magento2</platform>
-            <active>1</active>
+        <pickrr_magento2>
 
-            <automatic_export_enable>0</automatic_export_enable>
-            
-            <automatic_shipment_enable>0</automatic_shipment_enable>
-
-            <auth_token>YOUR_AUTH_TOKEN</auth_token>
+            <general>
+                <title>Pickrr</title>
+                <platform>Magento2</platform>
+                <active>1</active>
+                <automatic_export_enable>0</automatic_export_enable>
+                <automatic_shipment_enable>0</automatic_shipment_enable>
+                <auth_token>YOUR_AUTH_TOKEN</auth_token>
+            </general>
 
             <shipment_details>
-            	<pickup_time>PICKUP_TIME_FORMAT(YYYY-MM-DD HH:MM)</pickup_time>
-            	<from_name>FROM_NAME</from_name>
-            	<from_phone_number>FROM_PHONE_NUMBER</from_phone_number>
-            	<from_pincode>FROM_PINCODE</from_pincode>
-            	<from_address>FROM_ADDRESS</from_address>
+                <pickup_time>2016-01-01 00:00</pickup_time>
+                <from_name>FROM_NAME</from_name>
+                <from_phone_number>FROM_PHONE_NUMBER</from_phone_number>
+                <from_pincode>FROM_PINCODE</from_pincode>
+                <from_address>FROM_ADDRESS</from_address>
             </shipment_details>
 
-        </pickrr>
+            <models />
+            <resources />
+            <extraconfig />
+            <blocks />
+
+        </pickrr_magento2>
     </default>
 </config>

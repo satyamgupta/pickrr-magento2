@@ -138,7 +138,7 @@ extends \Magento\Framework\App\Helper\AbstractHelper
             curl_close($ch);
 
             if(gettype($result)!="array")
-              throw new \Exception("Problem in connecting with Pickrr");
+              throw new \Exception( print_r($result, true) . "Problem in connecting with Pickrr");
 
             if($result['err']!="")
               throw new \Exception($result['err']);
@@ -200,7 +200,6 @@ extends \Magento\Framework\App\Helper\AbstractHelper
             foreach ($shipment->getAllTracks() as $track) {
                 array_push($params['tracks'],$track->debug());
             };
-            // $this->scopeConfig->getValue('pickrr/api_key', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 
             $url = 'http://www.pickrr.com';
             $params = http_build_query($params);

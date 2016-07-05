@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <!-- Add new Tab -->
+        <tab id="pickrr" translate="label" sortOrder="300">
+            <label>Vendor Extension</label>
+        </tab>
+        <section id="pickrr_magento2" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Pickrr Magento2</label>
+            <tab>pickrr</tab>
+            <!-- resource tag name which we have to defined in the acl.xml -->
+            <resource>Pickrr_Magento2::config_pickrr</resource>
+
+    <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+
+            <label>General Options</label>
+
+            <field id="automatic_shipment_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Automatic Shipment Enable</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                <comment>
+                    If this option is enabled, whenever a new order is created, it's shipment will automatically be created using Pickrr.
+                </comment>
+            </field>
+
+            <field id="auth_token" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Auth Token</label>
+                <comment>
+                    Enter Auth Token provided to you by Pickrr.
+                </comment>
+                <validate>required-entry</validate>
+            </field>
+        </group>
+
+        <group id="shipment_details" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+
+            <label>Shipment Details</label>
+
+            <field id="pickup_time" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Pickup Time</label>
+                <comment>
+                    Pickup Time, Format: "YYYY-MM-DD HH:MM"
+                </comment>
+            </field>
+
+            <field id="from_name" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Name</label>
+                <comment>
+                    Sender's name on shipment, generally store's name
+                </comment>
+                <validate>required-entry</validate>
+            </field>
+
+            <field id="from_phone_number" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Phone Number</label>
+                <comment>
+                    Sender's phone number on shipment
+                </comment>
+                <validate>required-entry</validate>
+            </field>
+
+            <field id="from_pincode" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Pincode</label>
+                <comment>
+                    Sender's pincode on shipment
+                </comment>
+                <validate>required-entry</validate>
+            </field>
+
+            <field id="from_address" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Address</label>
+                <comment>
+                    Sender's address on shipment
+                </comment>
+                <validate>required-entry</validate>
+            </field>
+
+            
+        </group>
+        </section>
+    </system>
+</config>
