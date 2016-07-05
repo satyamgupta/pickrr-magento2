@@ -97,14 +97,13 @@ extends \Magento\Framework\App\Helper\AbstractHelper
         $order->save();
     }
 
-    public function createShipment($auth_token, $item_name, $pickup_time, $from_name, $from_phone_number, $from_pincode, $from_address, $to_name, $to_phone_number, $to_pincode, $to_address, $order_id = 'NULL', $cod=0.0)
+    public function createShipment($auth_token, $item_name, $from_name, $from_phone_number, $from_pincode, $from_address, $to_name, $to_phone_number, $to_pincode, $to_address, $order_id = 'NULL', $pickup_time = 'NULL', $cod=0.0)
     {
         try{
 
           $params = array(
                       'auth_token' => $auth_token,
                       'item_name' => $item_name,
-                      'order_time' => $pickup_time,
                       'from_name' => $from_name,
                       'from_phone_number' => $from_phone_number,
                       'from_pincode'=> $from_pincode,
@@ -117,6 +116,7 @@ extends \Magento\Framework\App\Helper\AbstractHelper
                     );
 
             if($cod>0.0) $params['cod'] = $cod;
+            if($pickup_time!='NULL') $params['order_time'] = $pickup_time;
 
             $json_params = json_encode( $params );
 
@@ -151,7 +151,7 @@ extends \Magento\Framework\App\Helper\AbstractHelper
         }
     }
 
-    public function createOrderShipment($auth_token, $order, $pickup_time, $from_name, $from_phone_number, $from_pincode, $from_address, $cod=0.0)
+    public function createOrderShipment($auth_token, $order, $from_name, $from_phone_number, $from_pincode, $from_address, $pickup_time = 'NULL', $cod=0.0)
     {
         try{
             $itemCount = $order->getTotalItemCount();

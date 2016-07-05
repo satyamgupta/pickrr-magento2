@@ -13,7 +13,7 @@
             </general>
 
             <shipment_details>
-                <pickup_time>2016-01-01 00:00</pickup_time>
+                <pickup_time>NULL</pickup_time>
                 <from_name>FROM_NAME</from_name>
                 <from_phone_number>FROM_PHONE_NUMBER</from_phone_number>
                 <from_pincode>FROM_PINCODE</from_pincode>
