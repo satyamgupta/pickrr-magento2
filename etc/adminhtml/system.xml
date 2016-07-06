@@ -3,7 +3,7 @@
     <system>
         <!-- Add new Tab -->
         <tab id="pickrr" translate="label" sortOrder="300">
-            <label>Vendor Extension</label>
+            <label>Pickrr Extension</label>
         </tab>
         <section id="pickrr_magento2" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Pickrr Magento2</label>
