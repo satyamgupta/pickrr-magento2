@@ -41,7 +41,7 @@ Passing $pickup_time and $cod is optional.
 
 **Prototype of the function:**
 ```php
-createShipment($auth_token, $item_name, $from_name, $from_phone_number, $from_pincode, $from_address, $to_name, $to_phone_number, $to_pincode, $to_address, $order_id = 'NULL', $pickup_time='NULL', $cod=0.0);
+createShipment($auth_token, $item_name, $from_name, $from_phone_number, $from_pincode, $from_address, $to_name, $to_phone_number, $to_pincode, $to_address, $cod=0.0, $pickup_time='NULL', $order_id = 'NULL');
 ```
 
 It returns the tracking_id from Pickrr.
@@ -52,7 +52,7 @@ It returns the tracking_id from Pickrr.
 
 $auth_key =  'Your Auth Key';
 
-$helper->createOrderShipment($auth_key, "Item's Name", "Merchant/Sender's Name", "Merchant/Sender's Phone", 'Pickup Address Pin', 'Pickup Address', '2016-06-17 17:00');
+$helper->createOrderShipment($auth_key, "Item's Name", "Merchant/Sender's Name", "Merchant/Sender's Phone", 'Pickup Address Pin', 'Pickup Address', 300.0, '2016-06-17 17:00');
 ```
 
 ---
@@ -63,7 +63,7 @@ This will also create shipment and associate it with the passed order. The clien
 
 **Prototype of the function:**
 ```php
-createOrderShipment($auth_token, $order, $from_name, $from_phone_number, $from_pincode, $from_address, $pickup_time='NULL', $cod=0.0);
+createOrderShipment($auth_token, $order, $from_name, $from_phone_number, $from_pincode, $from_address, $cod=0.0, $pickup_time='NULL');
 
 ```
 
@@ -74,5 +74,5 @@ createOrderShipment($auth_token, $order, $from_name, $from_phone_number, $from_p
 $auth_key =  'Your Auth Key';
 $order = $objectManager->get('Magento\Sales\Model\Order')->loadByIncrementId('100000094');
 
-$helper->createOrderShipment($auth_key, $order, "Merchant/Sender's Name", "Merchant/Sender's Phone", 'Pickup Address Pin', 'Pickup Address', '2016-06-17 17:00');
+$helper->createOrderShipment($auth_key, $order, "Merchant/Sender's Name", "Merchant/Sender's Phone", 'Pickup Address Pin', 'Pickup Address', 300.0, '2016-06-17 17:00');
 ```

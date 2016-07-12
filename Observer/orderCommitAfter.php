@@ -35,7 +35,7 @@ class orderCommitAfter implements ObserverInterface
      */
     public function execute(\Magento\Framework\Event\Observer $observer)
     {
-        if ("0" == $this->scopeConfig->getValue('pickrr_magento2/general/automatic_export_enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE))
+        if ("0" == $this->scopeConfig->getValue('pickrr_magento2/general/automatic_shipment_enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE))
           return NULL;
 
         $order = $observer->getEvent()->getOrder();
